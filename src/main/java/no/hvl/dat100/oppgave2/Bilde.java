@@ -33,7 +33,7 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		return "BILDE\n" + this.id + "\n" + this.bruker + "\n" + this.dato + "\n" + "0\n" + "net bilde\n" +
+		return "BILDE\n" + this.id + "\n" + this.bruker + "\n" + this.dato + "\n" + "0\n" + "et bilde\n" +
                 this.url + "oo.jpg\n";
 
 	}
