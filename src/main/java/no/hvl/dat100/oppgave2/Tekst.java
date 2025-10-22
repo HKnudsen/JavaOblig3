@@ -38,7 +38,7 @@ public class Tekst extends Innlegg {
 
 	@Override
 	public String toString() {
-		return "TEKST\n" + this.id + "\n" + this.bruker + "\n" + this.dato + "\n" + this.tekst + "\n";
+		return "TEKST\n" + this.id + "\n" + this.bruker + "\n" + this.dato + "\n" + "0\n" + this.tekst + "\n";
 
 	}
 	
