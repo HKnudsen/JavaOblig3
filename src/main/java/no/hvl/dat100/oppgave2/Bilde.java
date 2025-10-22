@@ -4,14 +4,22 @@ import no.hvl.dat100.common.TODO;
 
 public class Bilde extends Tekst {
 
-	// TODO - objekt variable
+	private String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
+        this.id = id;
+        this.bruker = bruker;
+        this.dato = dato;
+        this.url = url;
+        this.likes = 0;
 	}
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
+        this.id = id;
+        this.bruker = bruker;
+        this.dato = dato;
+        this.url = url;
+        this.likes = likes;
 	}
 	
 	public String getUrl() {
