@@ -33,7 +33,8 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method ());
+		return "BILDE\n" + this.id + "\n" + this.bruker + "\n" + this.dato + "\n" + "0\n" + "net bilde\n" +
+                this.url + "oo.jpg\n";
 
 	}
 
