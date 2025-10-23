@@ -19,13 +19,7 @@ public class Blogg {
 	}
 
 	public int getAntall() {
-		int count = 0;
-        for(Object t: this.tabell) {
-            if (t != null) {
-                count ++;
-            }
-        }
-        return count;
+		return this.nesteLedige;
 	}
 	
 	public Innlegg[] getSamling() {
