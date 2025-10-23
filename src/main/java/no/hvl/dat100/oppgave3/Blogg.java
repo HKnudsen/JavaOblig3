@@ -23,12 +23,7 @@ public class Blogg {
 	}
 	
 	public Innlegg[] getSamling() {
-		int lengde = this.getAntall();
-        Innlegg[] liste = new Innlegg[lengde];
-        for (int i = 0; i < lengde; i++) {
-            liste[i] = this.tabell[i];
-        }
-        return liste;
+		return this.tabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
