@@ -23,12 +23,12 @@ public class Bilde extends Tekst {
 	}
 	
 	public String getUrl() {
-		throw new UnsupportedOperationException(TODO.method());
+		return this.url;
 
 	}
 
 	public void setUrl(String url) {
-		throw new UnsupportedOperationException(TODO.method());
+        this.url = url;
 	}
 
 	@Override

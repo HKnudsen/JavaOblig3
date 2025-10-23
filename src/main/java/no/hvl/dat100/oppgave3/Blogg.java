@@ -2,6 +2,8 @@ package no.hvl.dat100.oppgave3;
 
 import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.*;
+import no.hvl.dat100.oppgave2.Tekst;
+import no.hvl.dat100.oppgave2.Bilde;
 
 public class Blogg {
 
@@ -62,8 +64,26 @@ public class Blogg {
 	}
 	
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
-	}
+		String returnStreng = "";
+        int count = 1;
+        for (Innlegg c : this.tabell) {
+            if(c instanceof Tekst) {
+                returnStreng += this.getAntall() + "\n" +
+                        "TEKST\n" +
+                        count + "\n" +
+                        c.getBruker() + "\n" +
+                        c.getDato() + "\n0\nen tekst \n";
+            } else if (c instanceof Bilde) {
+                returnStreng += this.getAntall() + "\n" +
+                        "BILDE\n" +
+                        count + "\n" +
+                        c.getBruker() + "\n" +
+                        c.getDato() + "\n0\nnet bilde\n";
+            }
+        }
+
+        return returnStreng;
+    }
 
 	// valgfrie oppgaver nedenfor
 	
