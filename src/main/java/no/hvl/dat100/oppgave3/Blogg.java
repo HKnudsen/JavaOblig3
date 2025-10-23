@@ -58,6 +58,7 @@ public class Blogg {
 	public boolean leggTil(Innlegg innlegg) {
         if (ledigPlass() && !finnes(innlegg)) {
             this.tabell[nesteLedige] = innlegg;
+            this.nesteLedige++;
             return true;
         }
         return false;
@@ -81,20 +82,30 @@ public class Blogg {
                         c.getDato() + "\n0\nnet bilde\n";
             }
         }
-
         return returnStreng;
     }
 
 	// valgfrie oppgaver nedenfor
 	
 	public void utvid() {
-		throw new UnsupportedOperationException(TODO.method());
+        Innlegg[] nyTabell = new Innlegg[this.tabell.length * 2];
+        for (int i = 0; i < this.tabell.length; i++) {
+            nyTabell[i] = this.tabell[1];
+        }
+        this.tabell = nyTabell;
 	}
 	
 	public boolean leggTilUtvid(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
-		
+        if (ledigPlass() && !finnes(innlegg)) {
+            this.leggTil(innlegg);
+            return true;
+        } else if (!ledigPlass() && !finnes(innlegg)){
+            this.utvid();
+            this.leggTil(innlegg);
+            return true;
+        } else {
+            return false;
+        }
 	}
 	
 	public boolean slett(Innlegg innlegg) {
