@@ -29,7 +29,7 @@ public class Blogg {
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
-        for (int i = 0; i < this.tabell.length; i++) {
+        for (int i = 0; i < this.nesteLedige; i++) {
             if (innlegg.getId() == this.tabell[i].getId()) {
                 return i;
             }
