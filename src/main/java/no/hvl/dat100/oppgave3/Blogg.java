@@ -38,11 +38,18 @@ public class Blogg {
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		for (Innlegg c : this.tabell) {
-            if (c.getId() == innlegg.getId()) {
+        for (int i = 0; i < this.nesteLedige; i++) {
+            if(this.tabell[i].getId() == innlegg.getId()) {
                 return true;
             }
         }
+
+
+        /*for (Innlegg c : this.tabell) {
+            if (c.getId() == innlegg.getId()) {
+                return true;
+            }
+        }*/
         return false;
 	}
 
