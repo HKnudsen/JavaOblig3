@@ -10,6 +10,9 @@ public abstract class Innlegg {
     protected String bruker;
     protected int likes;
 	
+	public Innlegg() {
+
+	}
 
 	public Innlegg(int id, String bruker, String dato) {
         this.id = id;
@@ -53,11 +56,11 @@ public abstract class Innlegg {
 	public int getLikes() {
 		return this.likes;
 	}
-	
+
 	public void doLike () {
 		this.likes += 1;
 	}
-	
+
 	public boolean erLik(Innlegg innlegg) {
         return this.id == innlegg.id;
     }
