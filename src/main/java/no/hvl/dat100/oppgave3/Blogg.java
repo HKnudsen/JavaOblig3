@@ -131,7 +131,7 @@ public class Blogg {
         int[] idListe = new int[count];
         count = 0;
         for (Innlegg i : this.tabell) {
-            if (c instanceof Tekst) {
+            if (i instanceof Tekst) {
                 Tekst t = (Tekst) i;
                 if (t.getTekst().contains(keyword)) {
                     idListe[count] = t.getId();
