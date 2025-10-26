@@ -109,13 +109,35 @@ public class Blogg {
 	}
 	
 	public boolean slett(Innlegg innlegg) {
-		
-		throw new UnsupportedOperationException(TODO.method());
+		for (int i = 0; i < this.tabell.length; i++) {
+            if (this.tabell[i].getId() == innlegg.getId()) {
+                this.tabell[i] = null;
+                return true;
+            }
+        }
+        return false;
 	}
-	
-	public int[] search(String keyword) {
-		
-		throw new UnsupportedOperationException(TODO.method());
 
+	public int[] search(String keyword) {
+        int count = 0;
+		for (Innlegg c : this.tabell) {
+            if (c instanceof Tekst) {
+                Tekst t = (Tekst) c;
+                if(t.getTekst().contains(keyword)){
+                    count++;
+                }
+            }
+        }
+        int[] idListe = new int[count];
+        count = 0;
+        for (Innlegg i : this.tabell) {
+            if (c instanceof Tekst) {
+                Tekst t = (Tekst) i;
+                if (t.getTekst().contains(keyword)) {
+                    idListe[count] = t.getId();
+                }
+            }
+        }
+        return idListe;
 	}
 }
