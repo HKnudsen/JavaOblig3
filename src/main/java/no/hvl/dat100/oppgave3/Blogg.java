@@ -39,9 +39,12 @@ public class Blogg {
 
 	public boolean finnes(Innlegg innlegg) {
 		for (Innlegg c : this.tabell) {
-            if (c.getId() == innlegg.getId()) {
-                return true;
+            if (c != null) {
+                if (c.getId() == innlegg.getId()) {
+                    return true;
+                }
             }
+
         }
         return false;
 	}
