@@ -30,9 +30,12 @@ public class Blogg {
 	
 	public int finnInnlegg(Innlegg innlegg) {
         for (int i = 0; i < this.tabell.length; i++) {
-            if (innlegg.getId() == this.tabell[i].getId()) {
-                return i;
+            if (innlegg != null) {
+                if (innlegg.getId() == this.tabell[i].getId()) {
+                    return i;
+                }
             }
+
         }
         return -1;
 	}
