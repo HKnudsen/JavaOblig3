@@ -12,7 +12,7 @@ public class Bilde extends Tekst {
         this.dato = dato;
         this.url = url;
         this.likes = 0;
-        this.tekst = tekst
+        this.tekst = tekst;
 	}
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
