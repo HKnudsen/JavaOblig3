@@ -10,10 +10,7 @@ public abstract class Innlegg {
     protected String bruker;
     protected int likes;
 	
-	public Innlegg() {
-		
-	}
-	
+
 	public Innlegg(int id, String bruker, String dato) {
         this.id = id;
         this.bruker = bruker;
